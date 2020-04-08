@@ -19,6 +19,16 @@ section{
   align-items: center;/*交差軸方向の揃え位置を指定 縦方向*/
 }
 
+section:before{
+  content: '';/*←入れないとおかしくなるのはなぜ？*/
+  position: absolute;
+  Top: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, #000000, transparent);/*2つ以上の色の間で、連続的な直線の変化から構成される画像を生成 Topへ半透明を指定*/
+  z-index: 10000;
+}
+
 section:after{
   content: '';/*←入れないとおかしくなるのはなぜ？*/
   position: absolute;
