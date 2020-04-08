@@ -51,6 +51,8 @@ section img{
 }
 
 #text,#text2,#text3,#text4{
+  text-align:center;
+  width:100%;
   position: absolute;
   font-size: 10em;
   font-family: 'Gotu', sans-serif;
@@ -73,5 +75,8 @@ section img{
 }
 
 #sky{
+  display:block;
+  margin:-50px auto;
+  height:120%;
   width: 120%;
 }
