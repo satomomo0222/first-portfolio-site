@@ -4,7 +4,7 @@
 /*疑問
 bodyでこの仕組みを作るとすると、下に続く文章はどうすればいいのか？body2とかで定義するのかな？*/
 body{
-  background: #ffffff;
+  background: #000000;
   min-height: 2000px; 
 }
 
@@ -24,7 +24,7 @@ section:after{
   bottom: 0;
   width: 100%;
   height: 100px;
-  background: linear-gradient(to top, #ffffff, transparent);/*2つ以上の色の間で、連続的な直線の変化から構成される画像を生成 Topへ半透明を指定*/
+  background: linear-gradient(to top, #000000, transparent);/*2つ以上の色の間で、連続的な直線の変化から構成される画像を生成 Topへ半透明を指定*/
   z-index: 10000;
 }
 
@@ -47,12 +47,13 @@ section img{
   height: 100%;
   display: flex;/*要素を横並びにする justify-content,align-itemsとセットで使われることが多い？*/
   justify-content: center;/*主軸方向の揃え位置を指定 横方向*/
-  align-items: center;/*交差軸方向の揃え位置を指定 縦方向*/
+  Top:150px;
 }
 
 #text,#text2,#text3,#text4{
   position: absolute;
   font-size: 10em;
+  font-family: 'Gotu', sans-serif;
 }
 #text{
   color:rgb(255, 255, 255);
