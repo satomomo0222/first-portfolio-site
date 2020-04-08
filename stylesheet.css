@@ -1,0 +1,80 @@
+
+/*疑問
+bodyでこの仕組みを作るとすると、下に続く文章はどうすればいいのか？body2とかで定義するのかな？*/
+body{
+  background: #ffffff;
+  min-height: 2000px; 
+}
+
+section{
+  position: relative;
+  width: 100%;
+  height: 100vh;/*vh デバイスの幅の1/100という定義 */
+  overflow: hidden;/*ボックスの範囲外を隠す*/
+  display: flex;/*要素を横並びにする justify-content,align-itemsとセットで使われることが多い？*/
+  justify-content: center;/*主軸方向の揃え位置を指定 横方向*/
+  align-items: center;/*交差軸方向の揃え位置を指定 縦方向*/
+}
+
+section:after{
+  content: '';/*←入れないとおかしくなるのはなぜ？*/
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #ffffff, transparent);/*2つ以上の色の間で、連続的な直線の変化から構成される画像を生成 Topへ半透明を指定*/
+  z-index: 10000;
+}
+
+section img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;/*画像の縦横比が変化しない！*/
+  pointer-events: none;/*カーソルが反応しないよ*/
+}
+
+
+
+
+
+
+
+
+/*↓↓↓　　恐らく問題のSection　　↓↓↓*/
+
+.parent{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;/*要素を横並びにする justify-content,align-itemsとセットで使われることが多い？*/
+  justify-content: center;/*主軸方向の揃え位置を指定 横方向*/
+  align-items: center;/*交差軸方向の揃え位置を指定 縦方向*/
+}
+
+#text,#text2,#text3,#text4{
+  position: absolute;
+  font-size: 10em;
+}
+#text{
+  color:rgb(255, 255, 255);
+  z-index:5;
+}
+#text2{
+  color:rgb(189, 189, 189);
+  z-index:4;
+}
+#text3{
+  color:rgb(146, 146, 146);
+  z-index:3;
+}
+#text4{
+  color:rgb(94, 94, 94);
+  z-index:2;
+}
+
+#sky{
+  width: 120%;
+}
