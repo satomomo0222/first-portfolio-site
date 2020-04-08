@@ -4,6 +4,7 @@
 /*疑問
 bodyでこの仕組みを作るとすると、下に続く文章はどうすればいいのか？body2とかで定義するのかな？*/
 body{
+  margin-top:65px;
   background: #000000;
   min-height: 2000px; 
 }
