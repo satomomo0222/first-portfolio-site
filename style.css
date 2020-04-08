@@ -67,6 +67,7 @@ section img{
   position: absolute;
   font-size: 10em;
   font-family: 'Sacramento', cursive;
+  font-weight: normal;
 }
 #text{
   color:rgb(255, 255, 255);
