@@ -1,4 +1,4 @@
-# tomoya_sato.github.io
+# tomoya_sato
 
 Portfolio website in progress
 
