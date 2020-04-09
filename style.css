@@ -8,7 +8,7 @@ html {
 /*疑問
 bodyでこの仕組みを作るとすると、下に続く文章はどうすればいいのか？body2とかで定義するのかな？*/
 body{
-  background: #000000;
+  background: #ffffff;
   min-height: 2000px; 
 }
 
@@ -16,7 +16,7 @@ header{
   display: block;
   height: 65px;
   width: 100%;
-  background-color: #000000;
+  background-color: #ffffff;
   position: fixed;
   top: 0;
   z-index: 100;
@@ -42,7 +42,7 @@ header{
 header a{
   line-height: 65px;
   padding:0 25px;
-  color:white;
+  color:rgb(0, 0, 0);
   font-family: 'Sacramento', cursive;
   font-weight: normal;
   z-index:10000;
@@ -55,7 +55,7 @@ header:after{
   Top: 65px;
   width: 100%;
   height: 100px;
-  background: linear-gradient(to bottom, #000000, transparent);/*2つ以上の色の間で、連続的な直線の変化から構成される画像を生成 Topへ半透明を指定*/
+  background: linear-gradient(to bottom, #ffffff, transparent);/*2つ以上の色の間で、連続的な直線の変化から構成される画像を生成 Topへ半透明を指定*/
   z-index: 10;
 }
 
@@ -76,7 +76,7 @@ section:after{
   bottom: 0;
   width: 100%;
   height: 100px;
-  background: linear-gradient(to top, #000000, transparent);/*2つ以上の色の間で、連続的な直線の変化から構成される画像を生成 Topへ半透明を指定*/
+  background: linear-gradient(to top, #ffffff, transparent);/*2つ以上の色の間で、連続的な直線の変化から構成される画像を生成 Topへ半透明を指定*/
   z-index: 10;
 }
 
@@ -141,17 +141,17 @@ section img{
 .section-title{
   display: flex;
   max-width:150px;
-  color:white;
+  color:rgb(0, 0, 0);
   font-size:30px;
   font-family: 'Sacramento', cursive;
   font-weight: normal;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid rgb(0, 0, 0);
   margin:0 auto;
   justify-content: center;
 }
 
 .About-contents{
-  color:white;
+  color:rgb(0, 0, 0);
   font-size:20px;
   text-align:center;
   padding-top:100px;
@@ -167,7 +167,7 @@ section img{
 }
 
 .Work-contents{
-  color:white;
+  color:rgb(0, 0, 0);
   font-size:40px;
   text-align:center;
   padding-top:100px;
