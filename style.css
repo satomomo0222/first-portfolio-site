@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  overscroll-behavior: none;/*モバイルのスクロール限界を知らせるビヨーンってインタラクションをなくす*/
+}
 /*疑問
 bodyでこの仕組みを作るとすると、下に続く文章はどうすればいいのか？body2とかで定義するのかな？*/
 body{
