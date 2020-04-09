@@ -1,15 +1,66 @@
 * {
   box-sizing: border-box;
 }
+
+html {
+  overscroll-behavior: none;/*モバイルのスクロール限界を知らせるビヨーンってインタラクションをなくす*/
+}
 /*疑問
 bodyでこの仕組みを作るとすると、下に続く文章はどうすればいいのか？body2とかで定義するのかな？*/
 body{
-  margin-top:65px;
   background: #000000;
   min-height: 2000px; 
 }
 
+header{
+  display: block;
+  height: 65px;
+  width: 100%;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+#container{
+  display:flex;
+  justify-content: space-between;
+}
+
+#header-left{
+  text-align:left;
+  padding-left:20px;
+  font-size:30px;
+}
+
+#header-right{
+  text-align:right;
+  padding-right:20px;
+  font-size:25px;
+}
+
+header a{
+  line-height: 65px;
+  padding:0 25px;
+  color:white;
+  font-family: 'Sacramento', cursive;
+  font-weight: normal;
+  z-index:10000;
+}
+
+header:after{
+  display: block;
+  content: '';/*←入れないとおかしくなるのはなぜ？*/
+  position: absolute;
+  Top: 65px;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, #000000, transparent);/*2つ以上の色の間で、連続的な直線の変化から構成される画像を生成 Topへ半透明を指定*/
+  z-index: 10;
+}
+
 section{
+  margin-top: 65px;
   position: relative;
   width: 100%;
   height: 100vh;/*vh デバイスの幅の1/100という定義 */
@@ -19,16 +70,6 @@ section{
   align-items: center;/*交差軸方向の揃え位置を指定 縦方向*/
 }
 
-section:before{
-  content: '';/*←入れないとおかしくなるのはなぜ？*/
-  position: absolute;
-  Top: 0;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(to bottom, #000000, transparent);/*2つ以上の色の間で、連続的な直線の変化から構成される画像を生成 Topへ半透明を指定*/
-  z-index: 10000;
-}
-
 section:after{
   content: '';/*←入れないとおかしくなるのはなぜ？*/
   position: absolute;
@@ -36,7 +77,7 @@ section:after{
   width: 100%;
   height: 100px;
   background: linear-gradient(to top, #000000, transparent);/*2つ以上の色の間で、連続的な直線の変化から構成される画像を生成 Topへ半透明を指定*/
-  z-index: 10000;
+  z-index: 10;
 }
 
 section img{
@@ -47,27 +88,29 @@ section img{
   height: 100%;
   object-fit: cover;/*画像の縦横比が変化しない！*/
   pointer-events: none;/*カーソルが反応しないよ*/
+  filter: brightness(110%);
 }
 
 
 /*↓↓↓恐らく問題のSection*/
 
-.parent{
+#parent{
   position: relative;
   width: 100%;
   height: 100%;
   display: flex;/*要素を横並びにする justify-content,align-itemsとセットで使われることが多い？*/
   justify-content: center;/*主軸方向の揃え位置を指定 横方向*/
-  Top:150px;
+  Top:30%;
 }
 
 #text,#text2,#text3,#text4{
   text-align:center;
-  width:100%;
+  width:80%;
   position: absolute;
-  font-size: 10em;
+  font-size: 8em;
   font-family: 'Sacramento', cursive;
   font-weight: normal;
+  opacity:0.8;
 }
 #text{
   color:rgb(255, 255, 255);
@@ -87,5 +130,47 @@ section img{
 }
 
 #sky{
+  Left:-50px;
   width: 120%;
+}
+
+.parts{
+  margin-top:300px;
+}
+
+.section-title{
+  display: flex;
+  max-width:150px;
+  color:white;
+  font-size:30px;
+  font-family: 'Sacramento', cursive;
+  font-weight: normal;
+  border-bottom: 2px solid white;
+  margin:0 auto;
+  justify-content: center;
+}
+
+.About-contents{
+  color:white;
+  font-size:20px;
+  text-align:center;
+  padding-top:100px;
+  font-family: 'Sacramento', cursive;
+  font-weight: normal;
+}
+.About-contents span{
+  font-size:30px;
+}
+
+.About-contents img{
+  width:50%;
+}
+
+.Work-contents{
+  color:white;
+  font-size:40px;
+  text-align:center;
+  padding-top:100px;
+  font-family: 'Sacramento', cursive;
+  font-weight: normal;
 }
