@@ -8,6 +8,16 @@
     font-size:7em;
   }
 
+  header:hover{
+    background: linear-gradient(to bottom, #000000, transparent);
+  }
+  header a:hover{
+    color:rgb(212, 212, 212);
+  }
+  
+  .menu-icon:hover{
+    color:rgb(212, 212, 212);
+  }
 }
 
 /*スマートフォン用ウィンドウサイズ*/
@@ -32,5 +42,15 @@
 
   .About-contents img{
     width:70%;
+  }
+  header:hover{
+    background: linear-gradient(to bottom, #000000, transparent);
+  }
+  header a:hover{
+    color:rgb(212, 212, 212);
+  }
+  
+  .menu-icon:hover{
+    color:rgb(212, 212, 212);
   }
 }
