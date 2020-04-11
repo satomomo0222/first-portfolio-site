@@ -1,0 +1,36 @@
+/*タブレット用ウィンドウサイズ*/
+@media(max-width:1000px){
+  header a{
+    padding: 0 10px;
+  }
+
+  #text,#text2,#text3,#text4{
+    font-size:7em;
+  }
+
+}
+
+/*スマートフォン用ウィンドウサイズ*/
+@media(max-width:670px){
+  #header-right a{
+    display:none;
+  }
+  .menu{
+    display:block;
+  }
+
+  #text,#text2,#text3,#text4{
+    font-size:5em;
+  }
+  .About-contents{
+    font-size:16px;
+  }
+
+  #Contact-contents{
+    width:60%;
+  }
+
+  .About-contents img{
+    width:70%;
+  }
+}
