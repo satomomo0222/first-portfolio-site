@@ -1,3 +1,5 @@
+
+  <link rel="stylesheet" href="https://satomomo0222.github.io/tomoya_sato/style.css">
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +7,8 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--モバイル端末のブラウザの画面幅に対応-->
   <title>Tomoya Sato</title>
   <link rel="stylesheet" href="https://satomomo0222.github.io/tomoya_sato/style.css">
+  <link rel="stylesheet" href="https://satomomo0222.github.io/tomoya_sato/responsive.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
 
 </head>
@@ -22,9 +26,9 @@
           <a href="#">Works</a>
           <a href="#">Contact</a>
       </div>
+      <a href="#" class="menu"><i class="fas fa-bars menu-icon"></i></a>
     </div>
   </header>
-
 
   <section>
     <img src="sky.jpg" id="sky">
@@ -83,9 +87,14 @@
     <div  class="section-title">
       Contact
     </div>
-    <div  class="Contact-contents">
+    <div  id="Contact-contents">
+    <p>Name</p>
+    <input type="text" id="name">
+    <p>Email</p>
+    <input type="text" id="email">
+    <p>Message</p>
+    <textarea id="form" cols="30" rows="10"></textarea>
     </div>
   </div>
-  
 </body>
 </html>
