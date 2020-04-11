@@ -21,6 +21,7 @@ header{
   position: fixed;
   top: 0;
   z-index: 100;
+  transition:all 0.4s;
 }
 
 #container{
@@ -49,6 +50,17 @@ header a{
   font-family: 'Sacramento', cursive;
   font-weight: normal;
   z-index:10000;
+}
+
+header:hover{
+  background: linear-gradient(to bottom, #ebebeb, transparent);
+}
+header a:hover{
+  color:black;
+}
+
+.menu-icon:hover{
+  color:black;
 }
 
 .menu{
@@ -227,4 +239,29 @@ section img{
 
 .Contact{
   margin-bottom:300px;
+}
+
+#btn{
+  font-size:30px;
+  font-weight: bold;
+  padding:12px 30px 8px 30px;
+  color:rgb(212, 212, 212);
+  transition: all 0.4s;
+  font-family: 'Sacramento', cursive;
+  font-weight: normal;
+  text-decoration: none;
+  border:2px solid rgb(212, 212, 212);
+  border-radius: 4px;
+}
+
+#btn:hover{
+  color:black;
+  background-color:rgb(212, 212, 212);
+}
+
+#send{
+  margin-top:30px;
+  width:20%;
+  text-align:center;
+  margin:70px auto;
 }
